@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>宝石箱の勉強室 | ジュエリーのサイト</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#0a5c45;
+  --green-deep:#063d2e;
+  --green-pale:#e6f0eb;
+  --gold:#c9a45c;
+  --ivory:#f8faf7;
+  --ink:#10251d;
+  --font:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--ivory);color:var(--ink);line-height:1.9;font-size:16px}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+/* header */
+header{background:var(--green-deep);color:var(--ivory);border-bottom:2px solid var(--gold)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px 24px;padding-top:14px;padding-bottom:14px}
+.logo{font-weight:800;font-size:1.15rem;letter-spacing:.12em;text-decoration:none}
+nav ul{display:flex;gap:22px;list-style:none;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:.95rem;padding:2px 0;border-bottom:1px solid transparent}
+nav a:hover,nav a[aria-current="page"]{border-bottom-color:var(--gold)}
+
+/* hero */
+.hero{background:linear-gradient(160deg,var(--green) 0%,var(--green-deep) 100%);color:var(--ivory);padding:72px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.35;letter-spacing:.06em}
+.hero p{margin-top:20px;max-width:34em;opacity:.92}
+.btns{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 28px;text-decoration:none;border:1px solid var(--gold);letter-spacing:.1em;font-size:.95rem}
+.btn.fill{background:var(--gold);color:var(--green-deep);font-weight:600}
+.btn:hover{background:var(--ivory);color:var(--green-deep);border-color:var(--ivory)}
+
+/* emerald-cut gem drawn with CSS */
+.gem-box{display:flex;justify-content:center}
+.gem{position:relative;width:min(260px,60vw);aspect-ratio:3/4;
+  clip-path:polygon(25% 0,75% 0,100% 16%,100% 84%,75% 100%,25% 100%,0 84%,0 16%);
+  background:linear-gradient(135deg,#35b48d 0%,#0e7a5b 45%,#042e22 100%)}
+.gem::before,.gem::after{content:"";position:absolute;
+  clip-path:polygon(25% 0,75% 0,100% 16%,100% 84%,75% 100%,25% 100%,0 84%,0 16%)}
+.gem::before{inset:11%;background:linear-gradient(315deg,#2aa17b 0%,#0a5c45 55%,#07412f 100%)}
+.gem::after{inset:27%;background:linear-gradient(135deg,#7fd9b8 0%,#16906b 60%,#0a5c45 100%)}
+
+/* sections */
+section{padding:64px 0}
+h2{font-size:1.55rem;font-weight:800;letter-spacing:.08em;color:var(--green);display:inline-block;border-bottom:2px solid var(--gold);padding-bottom:4px;margin-bottom:28px}
+.lead{max-width:38em}
+
+.topics{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.topic{background:var(--green-pale);border-left:4px solid var(--green);padding:20px 22px}
+.topic h3{font-size:1.1rem;color:var(--green-deep);margin-bottom:6px}
+.topic p{font-size:.93rem;line-height:1.8}
+
+.latest{background:var(--green-pale)}
+.posts{list-style:none;max-width:640px}
+.posts li{background:var(--ivory);border:1px solid #cfdfd7;padding:16px 20px;margin-bottom:14px}
+.posts time{display:block;font-size:.85rem;color:var(--green);font-weight:600;margin-bottom:2px}
+.more{display:inline-block;margin-top:10px;color:var(--green);font-weight:600}
+
+.teaser{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+.teaser div{aspect-ratio:4/3;border:1px dashed var(--green);background:var(--ivory);display:flex;align-items:center;justify-content:center;color:var(--green);font-size:.9rem}
+
+footer{background:var(--green-deep);color:var(--ivory);text-align:center;padding:28px 0;font-size:.88rem;border-top:2px solid var(--gold)}
+
+@media (max-width:760px){
+  .hero{padding:48px 0 56px}
+  .hero .wrap{grid-template-columns:1fr}
+  .gem-box{order:-1}
+  .gem{width:150px}
+  .topics,.teaser{grid-template-columns:1fr}
+  section{padding:48px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">宝石箱の勉強室</a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html" aria-current="page">ホーム</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+        <li><a href="gallery.html">ギャラリー</a></li>
+        <li><a href="about.html">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>ジュエリーを<br>学んで、描いて、残す。</h1>
+        <p>宝石の種類やカット、ジュエリーの歴史を少しずつ勉強して、その記録とイラストをまとめていくサイトです。</p>
+        <div class="btns">
+          <a class="btn fill" href="blog.html">勉強の記録を見る</a>
+          <a class="btn" href="gallery.html">ギャラリーへ</a>
+        </div>
+      </div>
+      <div class="gem-box" aria-hidden="true"><div class="gem"></div></div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>勉強していること</h2>
+      <p class="lead" style="margin-bottom:28px">ジュエリーは知れば知るほど奥が深い世界です。気になったところから、順番に調べています。</p>
+      <div class="topics">
+        <div class="topic">
+          <h3>宝石の種類</h3>
+          <p>ダイヤモンド、エメラルド、サファイアなど、石ごとの色や硬さ、産地の違いを調べています。</p>
+        </div>
+        <div class="topic">
+          <h3>カットとデザイン</h3>
+          <p>ブリリアントカットやエメラルドカットなど、石の輝きを引き出す形とジュエリーの意匠を学びます。</p>
+        </div>
+        <div class="topic">
+          <h3>ジュエリーの歴史</h3>
+          <p>古代の装身具から現代のハイジュエリーまで、時代ごとの流れと名作を追いかけます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="latest">
+    <div class="wrap">
+      <h2>最新の記録</h2>
+      <ul class="posts">
+        <li><time datetime="2026-10-15">2026.10.15</time>今日はエメラルドの内包物について勉強した。「庭」と呼ばれるほど特徴的で面白い。</li>
+        <li><time datetime="2026-10-14">2026.10.14</time>モース硬度の表を覚えた。ダイヤモンドが10なのは知っていたけど、他の石の数字も整理できた。</li>
+        <li><time datetime="2026-10-13">2026.10.13</time>ブリリアントカットの58面体の構造をノートに描いてみた。</li>
+      </ul>
+      <a class="more" href="blog.html">記録をもっと見る</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>ギャラリー</h2>
+      <p class="lead" style="margin-bottom:24px">ジュエリーをモチーフにした漫画やイラストを載せていきます。</p>
+      <div class="teaser" aria-hidden="true">
+        <div>イラスト</div><div>イラスト</div><div>漫画</div>
+      </div>
+      <a class="btn fill" href="gallery.html">ギャラリーを見る</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 宝石箱の勉強室</div>
+</footer>
+
+</body>
+</html>
