@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ブログ | 宝石箱の勉強室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#0a5c45;
+  --green-deep:#063d2e;
+  --green-pale:#e6f0eb;
+  --gold:#c9a45c;
+  --ivory:#f8faf7;
+  --ink:#10251d;
+  --font:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--ivory);color:var(--ink);line-height:1.9;font-size:16px}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+/* header */
+header{background:var(--green-deep);color:var(--ivory);border-bottom:2px solid var(--gold)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px 24px;padding-top:14px;padding-bottom:14px}
+.logo{font-weight:800;font-size:1.15rem;letter-spacing:.12em;text-decoration:none}
+nav ul{display:flex;gap:22px;list-style:none;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:.95rem;padding:2px 0;border-bottom:1px solid transparent}
+nav a:hover,nav a[aria-current="page"]{border-bottom-color:var(--gold)}
+
+/* page title */
+.page-head{background:linear-gradient(160deg,var(--green) 0%,var(--green-deep) 100%);color:var(--ivory);padding:44px 0 48px}
+.page-head h1{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:800;letter-spacing:.08em}
+.page-head p{margin-top:8px;opacity:.92}
+
+/* timeline */
+main{padding:40px 0 64px}
+.timeline{max-width:620px;margin:0 auto;list-style:none;background:#fff;border:1px solid #cfdfd7}
+.post{padding:18px 22px;border-bottom:1px solid #dbe8e1}
+.post:last-child{border-bottom:none}
+.post time{display:block;font-size:.85rem;color:var(--green);font-weight:600;margin-bottom:4px}
+.post p{white-space:pre-wrap;word-break:break-word}
+
+footer{background:var(--green-deep);color:var(--ivory);text-align:center;padding:28px 0;font-size:.88rem;border-top:2px solid var(--gold)}
+
+@media (max-width:760px){
+  .page-head{padding:32px 0 36px}
+  main{padding:24px 0 48px}
+  .timeline{border-left:none;border-right:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">宝石箱の勉強室</a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="blog.html" aria-current="page">ブログ</a></li>
+        <li><a href="gallery.html">ギャラリー</a></li>
+        <li><a href="about.html">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <h1>ブログ</h1>
+    <p>ジュエリーの勉強の進捗を、日記のように記録しています。</p>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+    <!-- 新しい記録は一番上に追加してください -->
+    <ol class="timeline">
+      <li class="post">
+        <time datetime="2026-10-15">2026.10.15</time>
+        <p>今日はエメラルドの内包物について勉強した。「庭」と呼ばれるほど特徴的で面白い。</p>
+      </li>
+      <li class="post">
+        <time datetime="2026-10-14">2026.10.14</time>
+        <p>モース硬度の表を覚えた。ダイヤモンドが10なのは知っていたけど、他の石の数字も整理できた。</p>
+      </li>
+      <li class="post">
+        <time datetime="2026-10-13">2026.10.13</time>
+        <p>ブリリアントカットの58面体の構造をノートに描いてみた。</p>
+      </li>
+      <li class="post">
+        <time datetime="2026-10-12">2026.10.12</time>
+        <p>ルビーとサファイアが同じ鉱物（コランダム）だと知って驚いた。赤いものだけがルビーと呼ばれる。</p>
+      </li>
+      <li class="post">
+        <time datetime="2026-10-11">2026.10.11</time>
+        <p>誕生石の一覧を調べた。国によって決め方が少し違うのが面白い。</p>
+      </li>
+      <li class="post">
+        <time datetime="2026-10-10">2026.10.10</time>
+        <p>ジュエリーの勉強を始めた。まずは宝石の種類から少しずつ。</p>
+      </li>
+    </ol>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 宝石箱の勉強室</div>
+</footer>
+
+</body>
+</html>
