@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>このサイトについて | 宝石箱の勉強室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#0a5c45;
+  --green-deep:#063d2e;
+  --green-pale:#e6f0eb;
+  --gold:#c9a45c;
+  --ivory:#f8faf7;
+  --ink:#10251d;
+  --font:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--ivory);color:var(--ink);line-height:1.9;font-size:16px}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+/* header */
+header{background:var(--green-deep);color:var(--ivory);border-bottom:2px solid var(--gold)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px 24px;padding-top:14px;padding-bottom:14px}
+.logo{font-weight:800;font-size:1.15rem;letter-spacing:.12em;text-decoration:none}
+nav ul{display:flex;gap:22px;list-style:none;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:.95rem;padding:2px 0;border-bottom:1px solid transparent}
+nav a:hover,nav a[aria-current="page"]{border-bottom-color:var(--gold)}
+
+/* page title */
+.page-head{background:linear-gradient(160deg,var(--green) 0%,var(--green-deep) 100%);color:var(--ivory);padding:44px 0 48px}
+.page-head h1{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:800;letter-spacing:.08em}
+.page-head p{margin-top:8px;opacity:.92}
+
+main{padding:16px 0 64px}
+section{padding:36px 0 8px}
+h2{font-size:1.4rem;font-weight:800;letter-spacing:.08em;color:var(--green);display:inline-block;border-bottom:2px solid var(--gold);padding-bottom:4px;margin-bottom:22px}
+.lead{max-width:38em}
+
+/* links */
+.link-group{font-size:.95rem;font-weight:600;color:var(--green-deep);margin:22px 0 10px}
+.link-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.link-card{display:flex;align-items:center;gap:14px;text-decoration:none;background:#fff;border:1px solid #cfdfd7;border-left:4px solid var(--green);padding:14px 16px}
+.link-card:hover{background:var(--green-pale);border-left-color:var(--gold)}
+.link-icon{flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;background:var(--green-pale)}
+.link-name{display:block;font-weight:600;color:var(--green-deep);line-height:1.5}
+.link-desc{display:block;font-size:.82rem;line-height:1.5;opacity:.8}
+.link-arrow{margin-left:auto;color:var(--green);font-size:1.3rem}
+
+/* form */
+.form-card{max-width:640px;background:#fff;border:1px solid #cfdfd7;border-left:4px solid var(--green);padding:26px 28px}
+.form-intro{font-size:.93rem;margin-bottom:20px}
+.form-group{margin-bottom:18px}
+.form-label{display:block;font-size:.9rem;font-weight:600;color:var(--green-deep);margin-bottom:6px}
+.required{color:#a63d4a;font-style:normal}
+.form-input,.form-textarea{width:100%;font-family:var(--font);font-size:1rem;color:var(--ink);background:var(--ivory);border:1px solid #9bb8aa;padding:10px 14px}
+.form-textarea{min-height:150px;resize:vertical}
+.form-input:focus,.form-textarea:focus{border-color:var(--green)}
+.field-error{display:block;font-size:.82rem;color:#a63d4a;margin-top:4px}
+.form-submit{font-family:var(--font);font-size:1rem;letter-spacing:.12em;background:var(--green);color:var(--ivory);border:1px solid var(--gold);padding:11px 32px;cursor:pointer}
+.form-submit:hover{background:var(--green-deep)}
+.form-submit:disabled{opacity:.5;cursor:not-allowed}
+.form-success{background:var(--green-pale);border:1px solid var(--green);padding:14px 18px;text-align:center;color:var(--green-deep);margin-bottom:18px}
+.form-error-global{background:#f8e8ea;border:1px solid #a63d4a;padding:12px 16px;color:#7a2530;font-size:.9rem;margin-bottom:16px}
+
+footer{background:var(--green-deep);color:var(--ivory);text-align:center;padding:28px 0;font-size:.82rem;border-top:2px solid var(--gold)}
+footer p{max-width:800px;margin:0 auto 8px;line-height:1.8;opacity:.92}
+
+@media (max-width:760px){
+  .page-head{padding:32px 0 36px}
+  .link-grid{grid-template-columns:1fr}
+  .form-card{padding:20px 18px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">宝石箱の勉強室</a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+        <li><a href="gallery.html">ギャラリー</a></li>
+        <li><a href="about.html" aria-current="page">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <h1>このサイトについて</h1>
+    <p>リンクとお問い合わせフォームです。</p>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+
+    <section>
+      <h2>サイトについて</h2>
+      <p class="lead">ジュエリーの種類やカット、歴史を勉強して、その記録と漫画・イラストをまとめているサイトです。ご質問やご感想は、下のフォームからお気軽にどうぞ。</p>
+    </section>
+
+    <section>
+      <h2>リンク</h2>
+
+      <p class="link-group">漫画・イラスト掲載サイト</p>
+      <div class="link-grid">
+        <a class="link-card" href="https://rookie.shonenjump.com/users/14728546961183734555" target="_blank" rel="noopener">
+          <span class="link-icon" aria-hidden="true">📚</span>
+          <span><span class="link-name">ジャンプルーキー</span><span class="link-desc">オリジナル漫画を掲載中</span></span>
+          <span class="link-arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="link-card" href="https://www.pixiv.net/users/105728284" target="_blank" rel="noopener">
+          <span class="link-icon" aria-hidden="true">🎨</span>
+          <span><span class="link-name">Pixiv</span><span class="link-desc">二次創作はこちらに掲載</span></span>
+          <span class="link-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+
+      <p class="link-group">SNS・その他</p>
+      <div class="link-grid">
+        <a class="link-card" href="https://bsky.app/profile/azaleaazalea88.bsky.social" target="_blank" rel="noopener">
+          <span class="link-icon" aria-hidden="true">🦋</span>
+          <span><span class="link-name">Bluesky</span><span class="link-desc">近況・作品のお知らせ</span></span>
+          <span class="link-arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="link-card" href="https://www.youtube.com/@LilyPopins0512" target="_blank" rel="noopener">
+          <span class="link-icon" aria-hidden="true">🎬</span>
+          <span><span class="link-name">YouTube（リリポピ）</span><span class="link-desc">動画チャンネル</span></span>
+          <span class="link-arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="link-card" href="https://lilipopi.github.io/lilypopins/" target="_blank" rel="noopener">
+          <span class="link-icon" aria-hidden="true">🌸</span>
+          <span><span class="link-name">リリポピのホームページ</span><span class="link-desc">別サイト</span></span>
+          <span class="link-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+
+      <p class="link-group">Azalea72のホームページ</p>
+      <div class="link-grid">
+        <a class="link-card" href="https://azaleacreativeroom888.github.io/storyreviewazalea/" target="_blank" rel="noopener">
+          <span class="link-icon" aria-hidden="true">📖</span>
+          <span><span class="link-name">書評サイト</span><span class="link-desc">本・アニメ・映画・ゲーム・小説の備忘録</span></span>
+          <span class="link-arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="link-card" href="https://azaleacreativeroom888.github.io/fan-english/" target="_blank" rel="noopener">
+          <span class="link-icon" aria-hidden="true">🍔</span>
+          <span><span class="link-name">英語サイト（English Site）</span><span class="link-desc">英語話者と英語学習者に向けたサイト</span></span>
+          <span class="link-arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="link-card" href="https://azaleacreativeroom888.github.io/fan-watercolor/" target="_blank" rel="noopener">
+          <span class="link-icon" aria-hidden="true">☁️</span>
+          <span><span class="link-name">水彩画サイト</span><span class="link-desc">水彩画掲載</span></span>
+          <span class="link-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>お問い合わせフォーム</h2>
+      <div class="form-card">
+        <p class="form-intro">ご質問・ご感想などはこちらからどうぞ。<br>Gmailで受け取り、返信いたします。</p>
+
+        <div data-fs-success class="form-success" style="display:none;" role="status">
+          メッセージを送信しました。ありがとうございます！
+        </div>
+        <div data-fs-error class="form-error-global" style="display:none;" role="alert"></div>
+
+        <form id="contact-form" action="https://formspree.io/f/maqvpvoz" method="POST">
+          <div class="form-group">
+            <label class="form-label" for="name">お名前</label>
+            <input class="form-input" type="text" id="name" name="name" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">メールアドレス <span class="required">*</span></label>
+            <input class="form-input" type="email" id="email" name="email" data-fs-field placeholder="example@email.com" autocomplete="email" required>
+            <span data-fs-error="email" class="field-error"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">メッセージ <span class="required">*</span></label>
+            <textarea class="form-textarea" id="message" name="message" data-fs-field rows="6" required></textarea>
+            <span data-fs-error="message" class="field-error"></span>
+          </div>
+          <button class="form-submit" type="submit" data-fs-submit-btn>送信する</button>
+        </form>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>当サイトに掲載されている画像・文章・作品について、AI学習への利用、トレース（トレパク）、無断転載、二次利用を禁止します。スクリーンショットの転載・無断引用はご遠慮ください。</p>
+    <p>Please refrain from using any images, text, or works on this website for AI training, tracing, unauthorized reproduction, redistribution, or secondary use.</p>
+    <p>&copy; 2026 宝石箱の勉強室</p>
+  </div>
+</footer>
+
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contact-form', formId: 'maqvpvoz' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+</body>
+</html>
